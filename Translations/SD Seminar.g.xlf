@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="SD Seminar">
+    <body>
+      <group id="body">
+        <trans-unit id="PageExtension 3747827805 - Control 2205917413 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Room</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension CSD ResourceCardExt - Control CSD Room - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2331780929 - Change 1878130204 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Instructor,Room</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CSD ResourceExt - Change Type - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2331780929 - Field 1204095466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CSD ResourceExt - Field CSD Resource Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2331780929 - Field 3679661628 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Maximum Participants</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CSD ResourceExt - Field CSD Maximum Participants - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2331780929 - Field 4076689624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity per Day</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension CSD ResourceExt - Field CSD Quantity per Day - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
