@@ -1,57 +1,36 @@
-page 50101"CSD Seminar Card"
+page 50102"CSD Seminar List"
 // CSD1.00 - 2018-01-01 - D. E. Veloper
-// Chapter 5 - Lab 2-4 & Lab 2-5
-
+// Chapter 5 - Lab 3-6
 {
-    PageType = Card;
+    Caption='Seminar List';
+    PageType = List;
     SourceTable = "CSD Seminar";
+    Editable = false;
+    CardPageId = 50101;
+    UsageCategory = Lists;
 
     layout
     {
         area(content)
         {
-            group(General)
+            repeater(Group)
             {
                 field("No."; "No.")
                 {
-                    AssistEdit=true;
-                    trigger OnAssistEdit();
-                    begin
-                        if AssistEdit then
-                            CurrPage.Update;
-                    end;
                 }
                 field(Name; Name)
                 {
                 }
-                field("Search Name"; "Search Name")
+                field("Seminar Duration";"Seminar Duration")
                 {
                 }
-                field("Seminar Duration";"Seminar Duration")
+                field("Seminar Price"; "Seminar Price")
                 {
                 }
                 field("Minimum Participants"; "Minimum Participants")
                 {
                 }
                 field("Maximum Participants"; "Maximum Participants")
-                {
-                }
-                field(Blocked; Blocked)
-                {
-                }
-                field("Last Date Modified"; "Last Date Modified")
-                {
-                }
-            }
-            group(Invoicing)
-            {
-                field("Gen. Prod. Posting Group"; "Gen. Prod. Posting Group")
-                {
-                }
-                field("VAT Prod. Posting Group"; "VAT Prod. Posting Group")
-                {
-                }
-                field("Seminar Price"; "Seminar Price")
                 {
                 }
             }
