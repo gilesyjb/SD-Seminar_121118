@@ -90,7 +90,7 @@ table 50110 "CSD Seminar Reg. Header"
         {
             Caption = 'Status';
             OptionCaption = 'Planning,Registration,Closed,Canceled';
-            OptionMembers = Planning, Registration, Closed, Canceled;
+            OptionMembers = Planning,Registration,Closed,Canceled;
         }
         Field(8; Duration; Decimal)
         {
@@ -130,8 +130,8 @@ table 50110 "CSD Seminar Reg. Header"
                     "Room County" := SeminarRoom.County;
                     "Room Country/Reg. Code" := SeminarRoom."Country/Region Code";
 
-                    if(CurrFieldNo <> 0) then begin
-                        if(SeminarRoom."CSD Maximum Participants" <> 0) and
+                    if (CurrFieldNo <> 0) then begin
+                        if (SeminarRoom."CSD Maximum Participants" <> 0) and
                            (SeminarRoom."CSD Maximum Participants" < "Maximum Participants")
                         then begin
                             if Confirm(Text004, true,
@@ -195,7 +195,7 @@ table 50110 "CSD Seminar Reg. Header"
 
             trigger OnValidate();
             begin
-                if("Seminar Price" <> xRec."Seminar Price") and
+                if ("Seminar Price" <> xRec."Seminar Price") and
                    (Status <> Status::Canceled)
                 then begin
                     SeminarRegLine.Reset;
@@ -207,8 +207,8 @@ table 50110 "CSD Seminar Reg. Header"
                              SeminarRegLine.TableCaption)
                         then begin
                             repeat
-                            SeminarRegLine.VALIDATE("Seminar Price", "Seminar Price");
-                            SeminarRegLine.MODifY;
+                                SeminarRegLine.VALIDATE("Seminar Price", "Seminar Price");
+                                SeminarRegLine.MODifY;
                             until SeminarRegLine.NEXT = 0;
                             MODifY;
                         end;
@@ -228,7 +228,7 @@ table 50110 "CSD Seminar Reg. Header"
         Field(22; Comment; Boolean)
         {
             Caption = 'Comment';
-            CalcFormula = Exist ("CSD Seminar Comment Line" where ("Table Name" = const("Seminar Registration"),
+            CalcFormula = Exist ("CSD Seminar Comment Line" where ("Table Name" = const ("Seminar Registration"),
                                                               "No." = Field ("No.")));
             Editable = false;
             FieldClass = FlowField;
@@ -259,8 +259,7 @@ table 50110 "CSD Seminar Reg. Header"
 
             trigger OnLookup();
             begin
-                with SeminarRegHeader do
-                begin
+                with SeminarRegHeader do begin
                     SeminarRegHeader := Rec;
                     SeminarSetup.Get;
                     SeminarSetup.TestField("Seminar Registration Nos.");
@@ -311,16 +310,16 @@ table 50110 "CSD Seminar Reg. Header"
         SeminarRoom: Record Resource;
         SeminarSetup: Record "CSD Seminar Setup";
         NoSeriesMgt: Codeunit NoSeriesManagement;
-        Text001 : Label 'You cannot delete the Seminar Registration, because there is at least one %1 where %2=%3.';
-        Text002 : Label 'You cannot change the %1, because there is at least one %2 with %3=%4.';
+        Text001: Label 'You cannot delete the Seminar Registration, because there is at least one %1 where %2=%3.';
+        Text002: Label 'You cannot change the %1, because there is at least one %2 with %3=%4.';
         Text004: Label 'This Seminar is for %1 participants. \The selected Room has a maximum of %2 participants \Do you want to change %3 for the Seminar from %4 to %5?';
         Text005: Label 'Should the new %1 be copied to all %2 that are not yet invoiced?';
         Text006: Label 'You cannot delete the Seminar Registration, because there is at least one %1.';
 
     trigger OnDelete();
     begin
-        if (CurrFieldNo>0) then 
-          TestField(Status,Status::Canceled);
+        if (CurrFieldNo > 0) then
+            TestField(Status, Status::Canceled);
         SeminarRegLine.Reset;
         SeminarRegLine.SetRange("Document No.", "No.");
         SeminarRegLine.SetRange(Registered, true);
@@ -352,6 +351,11 @@ table 50110 "CSD Seminar Reg. Header"
             NoSeriesMgt.InitSeries(SeminarSetup."Seminar Registration Nos.", xRec."No. Series", 0D, "No.", "No. Series");
         end;
         initrecord;
+        // >> Lab 8 1-1
+        if GetFilter("Seminar No.") <> '' then
+            if GetRangeMin("Seminar No.") = GetRangeMax("Seminar No.") then
+                Validate("Seminar No.", GetRangeMin("Seminar No."));
+        // << Lab 8 1-1
     end;
 
     local procedure InitRecord();
@@ -365,8 +369,7 @@ table 50110 "CSD Seminar Reg. Header"
 
     procedure AssistEdit(OldSeminarRegHeader: Record "CSD Seminar Reg. Header"): Boolean;
     begin
-        with SeminarRegHeader do
-        begin
+        with SeminarRegHeader do begin
             SeminarRegHeader := Rec;
             SeminarSetup.Get;
             SeminarSetup.TestField("Seminar Registration Nos.");
