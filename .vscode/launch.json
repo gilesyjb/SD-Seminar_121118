@@ -12,7 +12,7 @@
             "startupObjectType": "Page",
             "port": 7049,
             "breakOnError": true,
-            "schemaUpdateMode": "Recreate"
+            "schemaUpdateMode": "Synchronize"
         }
     ]
 }

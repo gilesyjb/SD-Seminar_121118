@@ -183,15 +183,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Reg. Header - Field Instructor Name - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3775708622 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Planning,Registration,Closed,Canceled</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Reg. Header - Field Status - Property OptionCaption</note>
-        </trans-unit>
         <trans-unit id="Table 3775708622 - Field 513339096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Reg. Header - Field Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3775708622 - Field 513339096 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Planning,Registration,Closed,Canceled</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Reg. Header - Field Status - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Table 3775708622 - Field 1637095154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Duration</source>
@@ -322,6 +322,11 @@
           <source>You cannot delete the Seminar Registration, because there is at least one %1.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Reg. Header - NamedType Text006</note>
+        </trans-unit>
+        <trans-unit id="Table 1606366568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Seminar Registration Line</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CSD Seminar Registration Line - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1606366568 - Field 486908828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document No.</source>
@@ -507,6 +512,11 @@
           <source>Seminar Registration</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page CSD Seminar Registration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3811004094 - Control 3854287965 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lines</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page CSD Seminar Registration - Control SeminarRegistrationLines - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3811004094 - Action 1570223100 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>&amp;Seminar Registration</source>
